@@ -1,0 +1,90 @@
+<section>
+
+    <button class ="get-teams-button" (click)="getTeams()" mat-raised-button>
+        {{showTable ? 'Hide' : 'Show' }} Standin Table</button>
+  
+    <section class="team-section" *ngIf="showTable">
+        <ng-container *ngIf="teamsFromDB && teamsFromDB.length">
+          <table mat-table [dataSource]="teamsFromDB" [ngClass]="{'dark-mode': isDarkModeEnabled}" class="team-table">
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef>Name</th>
+              <td mat-cell *matCellDef="let team">{{ team.Name }}</td>
+            </ng-container>
+          
+            <ng-container matColumnDef="points">
+              <th mat-header-cell *matHeaderCellDef>Points</th>
+              <td mat-cell *matCellDef="let team">{{ team.Points }}</td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="['name', 'points']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['name', 'points']"></tr>
+          </table>
+        </ng-container>
+      </section>
+      
+  </section>
+
+  <div>
+    <img class="image-class" src="https://upload.wikimedia.org/wikipedia/ro/thumb/6/6c/SuperLiga_Romania.svg/800px-SuperLiga_Romania.svg.png" alt="CFR Cluj logo">
+  </div>
+  
+
+  
+  
+  
+  <button class="add-team-button" (click)="showFields = !showFields" mat-raised-button>
+  {{ showFields ? 'Cancel' : 'Add New Team' }}
+</button>
+
+<div class="add-team-wrapper" *ngIf="showFields">
+    <section>
+        <div *ngIf="showFields">
+            <section>
+              <mat-form-field class="example-form-field">
+                <mat-label>Enter Team Name</mat-label>
+                <input matInput type="text" [(ngModel)]="newName">
+                <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+          
+              <mat-form-field class="example-form-field">
+                <mat-label>Enter Abbreviation </mat-label>
+                <input matInput type="text" [(ngModel)]="newAbbreviation">
+                <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+         
+              <mat-form-field class="example-form-field">
+                 <mat-label>Enter Founding Year</mat-label>
+                 <input matInput type="number" [(ngModel)]="newFoundingYear">
+                 <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+                   <mat-icon>close</mat-icon>
+                 </button>
+               </mat-form-field>
+         
+               <mat-form-field class="example-form-field">
+                 <mat-label>Enter Coach Name</mat-label>
+                 <input matInput type="text" [(ngModel)]="newCoach">
+                 <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+                   <mat-icon>close</mat-icon>
+                 </button>
+               </mat-form-field>
+         
+               <mat-form-field class="example-form-field">
+                 <mat-label>Enter Points</mat-label>
+                 <input matInput type="number" [(ngModel)]="newPoints">
+                 <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+                   <mat-icon>close</mat-icon>
+                 </button>
+               </mat-form-field>
+         
+               <button class="my-button-class" (click)="addTeams();refresh()" mat-raised-button> Add Team</button>
+
+            </section>
+         </div>
+    </section>
+  </div>
+  
+   

@@ -1,0 +1,154 @@
+
+  html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+  
+  .get-teams-button:hover {
+    background-color: #a01717;
+  }
+  
+  .add-team-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .add-team-button:hover {
+    background-color: #a01717;
+  }
+  
+  .team-section {
+    margin-top: 20px;
+  }
+  
+  .mat-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .dark-mode {
+    background-color: #333; 
+  }
+  
+  
+  .mat-header-cell,
+  .mat-cell {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .mat-header-row {
+    background-color: var(--highlight-color);
+  }
+  
+  .mat-row:nth-child(even) {
+    background-color: var(--highlight-color);
+  }
+  
+  .mat-row:hover {
+    background-color: var(--border-color);
+  }
+   
+  .add-team-button {
+    position: absolute;
+    top: 13.4vh;
+    right: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20vh;
+    margin-right: 10px;
+    outline: none;
+  }
+  
+  
+   .get-teams-button {
+    position: absolute;
+    top: 13.4vh;
+    right: 550px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20vh;
+    margin-right: 10px;
+    outline: none;
+  }
+  
+
+  .team-section {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .team-section {
+    position: absolute;
+    top: 10%;
+    right: 9.5%;
+    transform: translateY(50%);
+  }
+  
+  .mat-column-name, .mat-column-points {
+    width: 25%;
+  }
+
+  
+  .team-section th,
+  .team-section td {
+    border: 3px solid #ce1a0d;
+    padding: 20px;
+    background-color: #e2ec4d;
+    text-align: center
+    ;
+  }
+  
+  .team-section th {
+    background-color: #e2ec4d;
+    font-weight: bold;
+  }
+
+  .image-class {
+    position: absolute;
+    top: 110px;
+    right: 200px;
+    width: 150px;
+    height: 150px;
+  }
+  
+
+  .example-form-field {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 0;
+  }
+
+  .add-team-wrapper {
+    position: absolute;
+    top: 270px;
+    left: 18px;
+    right: 0px;
+    z-index: 1; 
+    padding: 20px; 
+  }
+
+  .my-button-class {
+    position: absolute;
+    top: 307px;
+    right: 20px;
+    background-color: #d94105;
+  }
+  
+
+  
+  
+
+  
+
+  
+  

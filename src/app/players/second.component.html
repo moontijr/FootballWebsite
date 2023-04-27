@@ -1,0 +1,172 @@
+<section>
+  <div class="button-container">
+  <section>
+    <button (click)="getPlayers()" mat-raised-button>Get All The Players</button>
+   
+    <mat-list role="list" *ngIf="showAllPlayersFlag">
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of playersFromDB">
+            <td>{{player.Name}}</td>
+            <td>{{player.Team}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </mat-list>
+  </section>
+
+  
+  <section>
+    <button (click)="getPlayersByGoals()" mat-raised-button>Sort Players By Goal Number</button>
+   
+    <mat-list role="list" *ngIf="showPlayersByGoalsFlag">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Goals</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of playersFromDB">
+            <td>{{player.Name}}</td>
+            <td>{{player.Goals}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-list>
+  </section>
+  
+  <section>
+    <button (click)="getPlayersByAge()" mat-raised-button>Sort Players by Age</button>
+   
+    <mat-list role="list" *ngIf="showPlayersByAgeFlag">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of playersFromDB">
+            <td>{{player.Name}}</td>
+            <td>{{player.Age}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-list>
+  </section>
+</div>
+
+
+
+
+<div class="player-stats">Player Stats 2023</div>
+
+
+  
+<div class="search-container">
+  <div>
+    <label for="search-input">Search for a player:</label>
+    <input id="search-input" type="text" [(ngModel)]="inputValue">
+    <button (click)="search()">Search</button>
+  </div>
+
+  <div *ngIf="searchResult">
+    <p>Name: {{ searchResult.Name }}</p>
+    <p>Age: {{ searchResult.Age }}</p>
+    <p>Position: {{ searchResult.Position }}</p>
+    <p>Foot: {{ searchResult.Foot }}</p>
+    <p>Nationality: {{ searchResult.Nationality }}</p>
+    <p>Goals: {{ searchResult.Goals }}</p>
+    <p>Team: {{ searchResult.Team }}</p>
+  </div>
+</div>
+
+ 
+   <section>
+
+    <button class="add-team-button" (click)="showFields = !showFields" mat-raised-button>
+      {{ showFields ? 'Add New Player' : 'Add New Player' }}
+    </button>
+
+    <div class="add-team-wrapper" *ngIf="showFields">
+
+     <mat-form-field class="example-form-field">
+       <mat-label>Enter Player ID</mat-label>
+       <input matInput type="text" [(ngModel)]="newPlayerId">
+       <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+         <mat-icon>close</mat-icon>
+       </button>
+     </mat-form-field>
+ 
+     <mat-form-field class="example-form-field">
+       <mat-label>Enter Player Name</mat-label>
+       <input matInput type="text" [(ngModel)]="newPlayerName">
+       <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+         <mat-icon>close</mat-icon>
+       </button>
+     </mat-form-field>
+
+     <mat-form-field class="example-form-field">
+      <mat-label>Enter Player Age</mat-label>
+      <input matInput type="number" [(ngModel)]="newPlayerAge">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Enter Player Position</mat-label>
+      <input matInput type="text" [(ngModel)]="newPosition">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Enter Player Preffered Foot</mat-label>
+      <input matInput type="text" [(ngModel)]="newFoot">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Enter Player Nationality</mat-label>
+      <input matInput type="text" [(ngModel)]="newNationality">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Enter Player Goals number</mat-label>
+      <input matInput type="number" [(ngModel)]="newGoals">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Enter Player Team</mat-label>
+      <input matInput type="text" [(ngModel)]="newTeam">
+      <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="inputValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button class="add-player-button" (click)="addPlayer(); refresh()" mat-raised-button> Add Player</button>
+  </div>
+
+  
+   </section>

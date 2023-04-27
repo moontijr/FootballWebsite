@@ -1,0 +1,195 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .light {
+    --background-color: #fafafa !important;
+    --text-color: #333 !important;
+  }
+  
+  .dark {
+    --background-color: #0a0a0a !important;
+    --text-color: #f5f5f5 !important;
+  }
+  
+  /* Global styles */
+  /* body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+  } */
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #f35f1c;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  header img {
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  /* Main styles */
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  article {
+    flex-basis: calc(50% - 20px);
+    /* background-color: #fff; */
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .dark article {
+    color: var(--text-color);
+  }
+  
+  article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  article img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  article p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #f35f1c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+  }
+
+  .circular-button {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 9999;
+  }
+  
+  .circular-button:hover {
+    background-color: darkred;
+  }
+
+  .refresh-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .toggle {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 999;
+  }
+
+  .digisport-btn {
+    background-image: url('https://s.iw.ro/gateway/g/ZmlsZVNvdXJjZT1odHRwJTNBJTJGJTJG/c3RvcmFnZTAxdHJhbnNjb2Rlci5yY3Mt/cmRzLnJvJTJGc3RvcmFnZSUyRjIwMTIl/MkYxMiUyRjA1JTJGMTA1MTlfMTA1MTlf/RGlnaV9TcG9ydF9nZW5lcmFsLmpwZyZ3/PTcwMCZoPTQyMCZoYXNoPTNhNWQzZjQxMDhkYzhhZTViZGVjYTZjMGFjNDNhZTU3.thumb.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+    position: absolute;
+    right: 20px;
+    top: 110px;
+    background-color: #0086c3;
+    color: #fff;
+    padding: 100px 325px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .digisport-btn:hover {
+    background-color: #005c8b;
+  }
+
+  .gsp-btn {
+    background-image: url('https://video.gsp.ro/assets/video/images/gsplivefb.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+    position: absolute;
+    right: 20px;
+    top: 350px;
+    background-color: #e14c0c;
+    color: #fff;
+    padding: 100px 325px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .gsp-btn:hover {
+    background-color: #985b48;
+  }
+
+  .orange-btn {
+    background-image: url('https://www.orange.ro/docs/servicii-fixe/tv/orange-tv-go/sport/logo-orange-sport.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+    position: absolute;
+    right: 20px;
+    top: 590px;
+    background-color: #e51906;
+    color: #fff;
+    padding: 100px 325px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .orange-btn:hover {
+    background-color: #a35a52;
+  }
+  
+  
+
+
+
+  
+
+  

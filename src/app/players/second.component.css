@@ -1,0 +1,161 @@
+
+ 
+
+  .button-container {
+    position: absolute;
+    top: 170px;
+    right: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button-container button {
+    position: relative;
+  }
+
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  th {
+    background-color: #b05109;
+    color: white;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  
+
+  .dark .button-container button {
+    background-color: #333; 
+    color: #fafafa; 
+  }
+  
+  .dark .button-container button:hover {
+    background-color: #555; 
+  }
+  
+  .dark mat-list-item {
+    background-color: #333; 
+    color: #fafafa; 
+    border-bottom: 1px solid #444; 
+  }
+  
+  .dark mat-list-item:last-child {
+    border-bottom: none;
+  }
+  
+  .dark mat-list-item span:first-child {
+    color: #fafafa; 
+  }
+  
+  .dark mat-list-item span:last-child {
+    color: #bbb; 
+  }
+
+  
+  button:hover {
+    opacity: 0.8; 
+  }
+  
+  /* add-team-button */
+  .add-team-button {
+    background-color: #d94105; 
+    width: 800px;
+  }
+
+  .add-team-button {
+    position: absolute;
+    top: 97%;
+    right: 0px;
+    transform: translateY(-50%);
+  }
+
+  .search-container {
+    left: 840px;
+    width: 48%;
+    position: relative;
+  top: -280px;
+  }
+  
+  .search-container label {
+    font-weight: bold;
+  }
+  
+  .search-container input {
+    width: 20%;
+    margin-right: 10px;
+  }
+  
+  .search-container button {
+    background-color: #9ab12f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:table-cell;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .search-container p {
+    margin-bottom: 5px;
+  }
+  
+
+
+
+  .player-stats {
+    position: absolute;
+    top: 14%;
+    right: 12%;
+    background-color: yellow;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 1;
+    margin-right: 20px;
+  }
+
+  .example-form-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .example-form-field {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .add-player-button {
+    position: absolute;
+    top: 1300px;
+    right: 0;
+    background-color: #d94105;
+}
+

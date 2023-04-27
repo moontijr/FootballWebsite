@@ -1,22 +1,24 @@
 import { Component, ViewChild } from '@angular/core';
-import {Router } from '@angular/router'
-import { LeagueService } from './Services/league.service';
-import { Team } from './Models/team';
-import { League } from './Models/league';
-import { TeamsComponent } from './teams/teams.component';
+import { League } from '../Models/league';
+import { LeagueService } from '../Services/league.service';
+import { Team } from '../Models/team';
+import { TeamsComponent } from '../teams/teams.component';
+import { Router, Routes } from '@angular/router';
+import {SecondComponent} from '../players/second.component'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-leagues',
+  templateUrl: './leagues.component.html',
+  styleUrls: ['./leagues.component.css']
 })
-export class AppComponent {
-  title = 'Demo';
-  constructor(private router:Router, private leagueService: LeagueService){}
+export class LeaguesComponent {
+
+  
 
   @ViewChild(TeamsComponent)
   teamsComponent!: TeamsComponent;
 
+  constructor(private leagueService: LeagueService, private router: Router){}
 
   inputValue: string = '';
   newName: string='';
@@ -28,7 +30,6 @@ export class AppComponent {
   showPlayers=false;
   isToggled = false;
   darkMode=false;
-  showTotw=false;
 
   toggleTranslation() {
     this.isToggled = !this.isToggled;
@@ -65,19 +66,14 @@ export class AppComponent {
   }
   showAllPlayers(){
     this.showPlayers=true;
+    this.router.navigate(['/teams']);
   }
 
   goToPage(pageName: string):void {
     this.router.navigate([`${pageName}`]);
   }
 
-  showTotws(){
-    this.showTotw=true;
-  }
-
-  displayPhoneNumber() {
-    alert("Phone Number: 0740288378\nEmail: munteantudor03@yahoo.com");
-  }
+  
 
   
 }
